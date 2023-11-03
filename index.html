@@ -30,7 +30,7 @@
             <div class="row flex-nowrap h-100">
                 <div class="col-12 col-md-4 contacts">
                     <div class="row h-100 flex-column flex-nowrap">
-                        
+
                         <div class="col-12 header d-flex justify-content-between align-items-center">
                             <div>
                                 <img src="img/avatar_1.jpg" alt="">
@@ -63,24 +63,45 @@
                                         aria-describedby="basic-addon1" v-model="searching">
                                 </div>
                             </div>
-                            <div class="col-12 flex-grow-1 overflow-y-auto" v-for="(element, index) in contacts">
-                              <div class="d-flex">
-                                <div>
-                                    <img :src="element.avatar" alt="">
+                            <div class="overflow-y-scroll">
+                                <div class="col-12 flex-grow-1 overflow-y-auto" v-for="(element, index) in contacts">
+                                    <div class="d-flex">
+                                        <div>
+                                            <img :src="element.avatar" alt="">
+                                        </div>
+                                        <div>
+                                            <span>{{element.name}}</span> <br>
+                                            <span>ultimo accesso</span>
+                                        </div>
+                                        <div>
+                                            12:00
+                                        </div>
+                                    </div>
                                 </div>
-                                <div>
-                                    <span>{{element.name}}</span> <br>
-                                    <span>ultimo accesso</span>
-                                </div>
-                                <div>
-                                    12:00
-                                </div>
-                              </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-8 header ">
-                        <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, officiis, in architecto facilis minus, cupiditate quae aliquam nam rerum beatae vitae nobis porro illo at omnis repellendus sit? Delectus, totam!  </div>
+
+                </div>
+                <div class="col-12 col-md-8 p-0">
+                    <div class="d-flex justify-content-between align-content-center header ">
+                        <div class="d-flex">
+                            <div>
+                                <img src="img/avatar_1.jpg" alt="">
+                            </div>
+                            <div>
+                                <span>Michele</span> <br>
+                                <span>ultimo accesso</span>
+                            </div>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-ellipsis-vertical" style="color: #bababa;"></i>
+                            <i class="fa-solid fa-ellipsis-vertical" style="color: #bababa;"></i>
+                            <i class="fa-solid fa-ellipsis-vertical" style="color: #bababa;"></i>
+                        </div>
+                    </div>
+                    <div class="bg-chat col-12 flex-grow-1 overflow-y-auto">
+                            
                     </div>
                 </div>
             </div>
@@ -89,7 +110,7 @@
 
         <!-- My JS -->
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-        <script src="   script.js"module"></script>
+        <script src="   script.js" module"></script>
 </body>
 
 </html>
