@@ -1,12 +1,60 @@
-body{
-font-family: 'Fredoka', sans-serif;
-font-family: 'Lato', sans-serif;
-font-family: 'Montserrat', sans-serif;
-font-family: 'Noto Sans', sans-serif;
-font-family: 'Open Sans', sans-serif;
-font-family: 'Poppins', sans-serif;
-font-family: 'PT Sans', sans-serif;
-font-family: 'Roboto', sans-serif;
+body {
+    font-family: "Lato", sans-serif;
+  }
+  
+  :root {
+    --color-white: #ffffff;
+    --color-dark-text: #161012;
+    --color-dark-grey: #6b7376;
+    --color-text-grey: #b6bbc1;
+    --color-headers: #eaeaea;
+    --color-contact-hover: #e9ebeb;
+    --color-light-icons: #b1b1b1;
+    --color-sent-message: #d5f9ba;
+    --color-notification: #8edafc;
+    --my-bg-color: linear-gradient(
+      to bottom,
+      #009688 0%,
+      #009688 20%,
+      #dbdbd3 20%,
+      #dbdbd3 100%
+    );
+  }
+  #app {
+    width: 100%;
+    height: 100vh;
+    background: var(--my-bg-color);
+    padding: 20px;
+  }
+  .header {
+    background-color: var(--color-headers);
+  }
+  .contacts {
+    background-color: var(--color-white);
+  }
+  .h0{
+    height: 0px;
+  }
+  .sent {
+  }
+  .received {
+  }
+  
+  img{
+    width: 55px;
+    border-radius: 50%;
+  }
 
-background-color: rgb(12, 19, 23)
-}
+  .bg-chat{
+    background-image: url(img/mine.jpg);
+  }
+
+  .bell{
+    border-radius: 50%;
+    background-color: white;
+    padding: 9px;
+  }
+
+  .bg-notifiche {
+    background-color: #8edafc;
+  }
