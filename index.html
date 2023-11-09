@@ -30,7 +30,6 @@
             <div class="row flex-nowrap h-100">
                 <div class="col-12 col-md-4 contacts">
                     <div class="row h-100 flex-column flex-nowrap">
-
                         <div class="col-12 header d-flex justify-content-between align-items-center">
                             <div>
                                 <img src="img/avatar_1.jpg" alt="">
@@ -44,7 +43,7 @@
                         </div>
 
 
-                        <div class="col-12">
+                        <div class="col-12 ">
                             <div class="d-flex">
                                 <div class="align-self-center bell">
                                     <i class="fa-solid fa-bell-slash" style="color: #8edafc;"></i>
@@ -61,12 +60,12 @@
                                         <i class="fa-solid fa-magnifying-glass top-icon"></i>
                                     </span>
                                     <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat"
-                                        aria-describedby="basic-addon1" v-model="searching">
+                                        aria-describedby="basic-addon1" v-model="searchText">
                                 </div>
                             </div>
                             
-                                <div class="col-12 flex-grow-1 overflow-y-auto " v-for="(element, index) in contacts">
-                                    <div class="d-flex">
+                                <div class="col-12 overflow-y-auto flex-grow-1 h-50">
+                                    <div class="d-flex" v-for="(element, index) in contacts">
                                         <div>
                                             <img :src="element.avatar" alt="">
                                         </div>
@@ -82,8 +81,10 @@
                             
                         </div>
                     </div>
-
                 </div>
+
+                <!--QUTSTO E' L'HEADER-->
+
                 <div class="col-12 col-md-8 p-0">
                     <div class="d-flex justify-content-between align-content-center header ">
                         <div class="d-flex">
@@ -101,8 +102,29 @@
                             <i class="fa-solid fa-ellipsis-vertical" style="color: #bababa;"></i>
                         </div>
                     </div>
-                    <div class="bg-chat col-12 flex-grow-1 overflow-y-scroll">
-                        
+
+                    <!--QUESTA è LA CHAT-->
+
+                    <div class="bg-chat col-12 flex-grow-1 overflow-y-scroll bg-chat ">
+                        <div class="d-flex flex-row-reverse p-2">
+                            <span class="msg-sent"> ciao </span>
+                        </div>
+                        <div class="d-flex p-2">
+                            <span class="msg-recived">maremma vacca</span>
+                        </div>
+                        <!--INVIA MESSAGGI-->
+                    <div class="col-12 d-flex text-center ">
+                        <div class="col-2">
+                            maremma
+                        </div>
+                        <div class="col-8">
+                            <input type="text" class="w-100">
+                        </div>
+                        <div class="col-2 text-center">
+                            <span>emjoi</span>
+                        </div>
+                    </div>
+                    
                     </div>
                 </div>
             </div>
