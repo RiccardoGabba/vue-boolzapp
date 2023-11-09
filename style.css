@@ -19,6 +19,7 @@ body {
       #dbdbd3 20%,
       #dbdbd3 100%
     );
+    --background: linear-gradient(180deg, #009688 18.55%, #D9DBDS 18.56%)
   }
   #app {
     width: 100%;
@@ -33,7 +34,7 @@ body {
     background-color: var(--color-white);
   }
   .h0{
-    height: 0px;
+    height: 0;
   }
   .sent {
   }
@@ -46,7 +47,7 @@ body {
   }
 
   .bg-chat{
-    background-image: url("../img/mine.jpg");
+    background-image: var(--background);
   }
 
   .bell{

@@ -55,6 +55,7 @@
                                 </div>
                             </div>
                             <div class="col-12">
+                                <!--Questa è la barra di ricerca per i nomi-->
                                 <div class="input-group my-2">
                                     <span class="input-group-text" id="basic-addon1">
                                         <i class="fa-solid fa-magnifying-glass top-icon"></i>
@@ -63,14 +64,14 @@
                                         aria-describedby="basic-addon1" v-model="searching">
                                 </div>
                             </div>
-                            <div class="overflow-y-scroll">
-                                <div class="col-12 flex-grow-1 overflow-y-auto" v-for="(element, index) in contacts">
+                            
+                                <div class="col-12 flex-grow-1 overflow-y-auto " v-for="(element, index) in contacts">
                                     <div class="d-flex">
                                         <div>
                                             <img :src="element.avatar" alt="">
                                         </div>
                                         <div>
-                                            <span>{{element.name}}</span> <br>
+                                            <span>{{ element.name }}</span> <br>
                                             <span>ultimo accesso</span>
                                         </div>
                                         <div>
@@ -78,7 +79,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            
                         </div>
                     </div>
 
@@ -110,7 +111,7 @@
 
         <!-- My JS -->
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-        <script src="   script.js" module"></script>
+        <script src="script.js" module"></script>
 </body>
 
 </html>
