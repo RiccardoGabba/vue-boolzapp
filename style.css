@@ -41,7 +41,9 @@ body {
     border-radius: 50%;
   }
 
- 
+  .bg-chat{
+    background-image: var(--background);
+  }
 
   .bell{
     border-radius: 50%;
@@ -65,9 +67,7 @@ body {
     background-color: var(--color-headers);
   }
   
-  .bg-chat{
-    background-image: var(--background);
-  }
+ 
 /*//////////////////////////////////////////////////////////////////////*/
 
   .msg-sent{
