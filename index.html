@@ -63,22 +63,24 @@
                                         aria-describedby="basic-addon1" v-model="searchText">
                                 </div>
                             </div>
-                            
-                                <div class="col-12 overflow-y-auto flex-grow-1 h-50">
-                                    <div class="d-flex" v-for="(element, index) in contacts">
-                                        <div>
-                                            <img :src="element.avatar" alt="">
-                                        </div>
-                                        <div>
-                                            <span>{{ element.name }}</span> <br>
-                                            <span>ultimo accesso</span>
-                                        </div>
-                                        <div>
-                                            12:00
-                                        </div>
+
+                            <div class="col-12 overflow-y-auto flex-grow-1 h-50">
+
+                                <div class="d-flex" v-for="(element, index) in contacts">
+                                    <div>
+                                        <img :src="element.avatar" alt="">
+                                    </div>
+                                    <div>
+                                        <span>{{ element.name }}</span> <br>
+                                        <span>ultimo accesso</span>
+                                    </div>
+                                    <div>
+                                        12:00
                                     </div>
                                 </div>
-                            
+
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -106,13 +108,20 @@
                     <!--QUESTA è LA CHAT-->
 
                     <div class="bg-chat col-12 flex-grow-1 overflow-y-scroll bg-chat ">
-                        <div class="d-flex flex-row-reverse p-2">
-                            <span class="msg-sent"> ciao </span>
+
+                        <div class=" p-2" v-for="(contact, index) in contacts[counter].messages">
+                            
+                            <div v-if="contact.status === 'sent'" class="flex-row-reverse d-flex">
+                                <span class="msg-sent"> {{ contact.message }} </span>
+                            </div>
+
+                            <div class="d-flex p-2" v-if="contact.status === 'received' ">
+                                <span class="msg-recived">{{ contact.message }}</span>
+                            </div>
                         </div>
-                        <div class="d-flex p-2">
-                            <span class="msg-recived">maremma vacca</span>
-                        </div>
-                        <!--INVIA MESSAGGI-->
+
+                    </div>
+                    <!--INVIA MESSAGGI-->
                     <div class="col-12 d-flex text-center ">
                         <div class="col-2">
                             maremma
@@ -123,8 +132,6 @@
                         <div class="col-2 text-center">
                             <span>emjoi</span>
                         </div>
-                    </div>
-                    
                     </div>
                 </div>
             </div>

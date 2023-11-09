@@ -3,7 +3,12 @@ const {createApp} = Vue
 createApp ({
     data(){
         return {
-        
+            activeContactIndex: 0,
+            searchText: '',
+            messages: '',
+
+            counter: 0,
+
           contacts: [
                 {
                     id: 1,
@@ -178,10 +183,12 @@ createApp ({
         }
     },
     methods: {
-
+        selectContact(id) {
+             
+        }
     },
     computed: {
-        
+
     }
 }).mount('#app')
 
