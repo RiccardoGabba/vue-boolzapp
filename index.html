@@ -63,14 +63,13 @@
                                         aria-describedby="basic-addon1" v-model="searchText">
                                 </div>
                             </div>
-
+                            <!--QUESTI SONO I CONTATTI-->
                             <div class="col-12 overflow-y-auto flex-grow-1 h-50">
-
-                                <div class="d-flex" v-for="(element, index) in contacts">
+                                <div class="d-flex chat" v-for="(element, index) in contacts" @click="activeContactIndex = index">
                                     <div>
                                         <img :src="element.avatar" alt="">
                                     </div>
-                                    <div>
+                                    <div class="my-2">
                                         <span>{{ element.name }}</span> <br>
                                         <span>ultimo accesso</span>
                                     </div>
@@ -107,9 +106,9 @@
 
                     <!--QUESTA è LA CHAT-->
 
-                    <div class="bg-chat col-12 flex-grow-1 overflow-y-scroll bg-chat ">
+                    <div class="bg-chat col-12 flex-grow-1  bg-chat overflow-y-auto flex-grow-1 h-75 ">
 
-                        <div class=" p-2" v-for="(contact, index) in contacts[counter].messages">
+                        <div class=" p-2" v-for="(contact, index) in contacts[activeContactIndex].messages">
                             
                             <div v-if="contact.status === 'sent'" class="flex-row-reverse d-flex">
                                 <span class="msg-sent"> {{ contact.message }} </span>
@@ -127,7 +126,9 @@
                             maremma
                         </div>
                         <div class="col-8">
-                            <input type="text" class="w-100">
+                                <div class="col">
+                                  <input type="text" class="form-control" placeholder="Scrivi messaggio" @keyup.enter="newMessage()" v-model="userMessage">
+                                </div>
                         </div>
                         <div class="col-2 text-center">
                             <span>emjoi</span>
@@ -140,7 +141,7 @@
 
         <!-- My JS -->
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-        <script src="script.js" module"></script>
+        <script src="script.js" module></script>
 </body>
 
 </html>

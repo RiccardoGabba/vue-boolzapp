@@ -6,6 +6,7 @@ createApp ({
             activeContactIndex: 0,
             searchText: '',
             messages: '',
+            userMessage: '',
 
             counter: 0,
 
@@ -185,7 +186,26 @@ createApp ({
     methods: {
         selectContact(id) {
              
+        },
+        newMessage() {
+            if(this.userMessage !== '') {
+                this.contacts[this.activeContactIndex].messages.push({ 
+                    date: '10/01/2020 15:30:55',
+                    message: this.userMessage,
+                    status:'sent',
+                });
+            }
+            setTimeout(() => {
+                this.contacts[this.activeContactIndex].messages.push({ 
+                    date: '10/01/2020 15:30:55',
+                    message: 'qualcosa',
+                    status:'received',
+                });
+            }, 1000);
+                
+       
         }
+        
     },
     computed: {
 

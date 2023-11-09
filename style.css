@@ -31,7 +31,7 @@ body {
   .contacts {
     background-color: var(--color-white);
   }
-  
+
   .h0{
     height: 0;
   }
@@ -41,14 +41,16 @@ body {
     border-radius: 50%;
   }
 
-  .bg-chat{
-    background-image: var(--background);
-  }
+ 
 
   .bell{
     border-radius: 50%;
     background-color: white;
     padding: 9px;
+  }
+
+  .chat:hover{
+    background-color: var(--color-contact-hover);
   }
 /*BACKGROUND*/
   .bg-notifiche {
@@ -63,6 +65,9 @@ body {
     background-color: var(--color-headers);
   }
   
+  .bg-chat{
+    background-image: var(--background);
+  }
 /*//////////////////////////////////////////////////////////////////////*/
 
   .msg-sent{
